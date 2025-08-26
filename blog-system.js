@@ -177,7 +177,6 @@
       return `
         <div class="project-box">
           <div class="info-div">
-            <img class="faviconforProject" src="./src/png/favicon.png" alt="" />
             <div class="ProjectHeading">${this.escape(p.title || '')}</div>
             <div class="ProjectDescription">${this.escape(p.excerpt || '')}</div>
             <div class="ProjectDescription" style="color:var(--color-ddd-color);font-size:1.4rem;">
