@@ -115,7 +115,7 @@
 
     async getMarkdown(filename) {
       if (this.cache.has(filename)) return this.cache.get(filename);
-      const res = await fetch(`/blog/posts/${filename}`);
+      const res = await fetch(`./blog/posts/${filename}`);
       if (!res.ok) throw new Error(`Failed to load markdown: ${filename}`);
       const txt = await res.text();
       this.cache.set(filename, txt);
