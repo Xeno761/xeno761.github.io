@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Namit Agarwal | Blog</title>
+  <link rel="icon" type="image/x-icon" href="src/png/main-favicon.png" />
+  <!-- aos cdn -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <!-- google fonts-->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Passions+Conflict&family=Orbitron&family=Fira+Code&family=Six+Caps" />
+  <!-- your style.css last -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="preloader"></div>
+
+  <header>
+
+    <div class="cursor-inner" id="cursor-inner"></div>
+    <div class="cursor-outer" id="cursor-outer"></div>
+
+    <div class="navbar" id="navbar">
+      <div class="hey">My Blog!</div>
+      <div class="logo" tabindex="0" aria-label="namit agarwal logo">
+        <div class="logo-top">
+          <img src="src/png/nav-avatar.png" alt="animation-head" id="nav-avatar"/>
+        </div>
+      </div>
+      <div class="navbar-tabs" id="navbar-tabs">
+        <ul class="navbar-tabs-ul">
+          <li class="Home" data-aos="fade-down" data-aos-delay="100"><a href="index.html">&#60;/Home</a></li>
+          <li class="AboutMe" data-aos="fade-down" data-aos-delay="300"><a href="index.html#AboutMe">&#60;/About&#62;</a></li>
+          <li class="Skills" data-aos="fade-down" data-aos-delay="500"><a href="index.html#Skills">&#60;/Skills&#62;</a></li>
+          <li class="Projects" data-aos="fade-down" data-aos-delay="700"><a href="index.html#Projects">&#60;/Projects&#62;</a></li>
+          <li class="Blog activeThistab" data-aos="fade-down" data-aos-delay="900"><a href="blog.html">&#60;/Blog&#62;</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+  <div class="fakenavbar"></div>
+
+  <div class="hamburger" id="hamburger">
+    <div class="hamburgerbase">
+      <button id="hamburger-button">
+        <div id="burger-bar1" class="burger-bar"></div>
+        <div id="burger-bar2" class="burger-bar"></div>
+        <div id="burger-bar3" class="burger-bar"></div>
+      </button>
+    </div>
+  </div>
+  <ul class="mobiletogglemenu" id="mobiletogglemenu">
+    <div class="mobile-navbar-tabs-ul">
+      <li id="home-mobile-tab" class="mobile-navbar-tabs-li Home" onclick="hidemenubyli()">
+        <a href="index.html" tabindex="0" aria-label="home menu button">
+            &#60;/Home&#62;
+        </a>
+    </li>
+      <li id="aboutme-mobile-tab" class="mobile-navbar-tabs-li AboutMe" onclick="hidemenubyli()">
+        <a href="index.html#AboutMe" tabindex="0" aria-label="aboutme menu button">
+            &#60;/About&#62;
+        </a>
+        </li>
+      <li id="skills-mobile-tab" class="mobile-navbar-tabs-li Skills" onclick="hidemenubyli()">
+        <a href="index.html#Skills" tabindex="0" aria-label="skills menu button">
+            &#60;/Skills&#62;
+        </a>
+    </li>
+      <li id="projects-mobile-tab" class="mobile-navbar-tabs-li Projects" onclick="hidemenubyli()">
+        <a href="index.html#Projects" tabindex="0" aria-label="projects menu button">
+            &#60;/Projects&#62;
+        </a>
+    </li>
+      <li id="blog-mobile-tab" class="mobile-navbar-tabs-li Blog activeThismobiletab" onclick="hidemenubyli()">
+        <a href="blog.html" tabindex="0" aria-label="blog menu button">
+            Blog&#62;
+        </a>
+    </li>
+    </div>
+  </ul>
+
+  <main class="main">
+    <div class="blob"></div>
+
+    <section class="projects-section-container">
+      <div class="projects-section-div">
+        <div class="projects-heading">
+          <article class="projects-heading-article">Blog</article>
+          <div class="projectsHeadingP"></div>
+        </div>
+
+        <div class="language-speak" style="margin-top:30px; justify-content:center;">
+          <input id="blog-search" type="text" placeholder="Search posts..." style="
+            width:60%; max-width:600px; padding:12px 18px; background:transparent;
+            border:1px solid var(--tech-stack-box-border-color); border-radius:30px;
+            color:var(--color-white); font-size:1.5rem; outline:none; font-family:fira code;">
+        </div>
+
+        <div class="project-boxes-div" style="padding-top:30px;">
+          <div id="blog-grid"></div>
+        </div>
+
+        <div class="project-buttons" style="justify-content:center;">
+          <button class="cta" id="prev-page"><span>Previous</span></button>
+          <article class="footer-bottom article page-info" style="margin:0 15px;color:var(--color-white);">Page 1</article>
+          <button class="cta" id="next-page"><span>Next</span></button>
+        </div>
+
+        <div id="blog-empty" style="display:none; text-align:center; color:var(--color-ddd-color); font-size:1.6rem; padding:40px;">
+          No posts found
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="blog-modal" class="blog-modal" style="display:none;">
+    <div class="blog-modal-content">
+      <div class="blog-modal-header">
+        <h1 class="blog-modal-title" id="modal-title"></h1>
+        <button class="blog-modal-close" id="close-modal" aria-label="Close">&times;</button>
+      </div>
+      <div class="blog-modal-body" id="modal-body"></div>
+    </div>
+  </div>
+
+  <button id="backtotopbutton" onclick="scrolltoTopfunction()">
+    <article>BACK TO TOP</article>
+  </button>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
+  <script src="main.js"></script>
+  <script src="blog-system.js"></script>
+
+  <script>
+    const cursorInner = document.getElementById("cursor-inner");
+    const cursorOuter = document.getElementById("cursor-outer");
+    const links = document.querySelectorAll("a,label,button");
+
+    document.addEventListener("mousemove", function (e) {
+      const posX = e.clientX;
+      const posY = e.clientY;
+
+      cursorInner.style.left = `${posX}px`;
+      cursorInner.style.top = `${posY}px`;
+
+      // cursorOuter.style.left = `${posX}px`;
+      // cursorOuter.style.top = `${posY}px`;
+
+      cursorOuter.animate(
+        {
+          left: `${posX}px`,
+          top: `${posY}px`,
+        },
+        { duration: 500, fill: "forwards" }
+      );
+
+      links.forEach((link) => {
+        link.addEventListener("mouseenter", () => {
+          cursorInner.classList.add("hover");
+          cursorOuter.classList.add("hover");
+        });
+        link.addEventListener("mouseleave", () => {
+          cursorInner.classList.remove("hover");
+          cursorOuter.classList.remove("hover");
+        });
+      });
+    });
+  </script>
+</body>
+</html>

@@ -2019,3 +2019,208 @@ footer {
         margin-top: 100px;  
     }
 }
+
+.blog-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(11, 11, 11, 0.85);
+  backdrop-filter: blur(10px);
+  z-index: 99999;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.blog-modal-content {
+  width: min(900px, 92vw);
+  max-height: 90vh;
+  overflow: auto;
+  border: 1px solid var(--tech-stack-border-color);
+  border-radius: 20px;
+  background-color: var(--color-dark-mode);
+}
+
+.blog-modal-header {
+  padding: 24px;
+  border-bottom: 1px solid var(--tech-stack-box-border-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  gap: 1rem;
+}
+
+.blog-modal-title {
+  font-size: 2.4rem;
+  color: var(--color-white);
+  margin: 0;
+  text-align: center;
+  flex: 1;
+}
+
+.blog-modal-close {
+  position: absolute;
+  right: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  color: var(--color-white);
+  font-size: 2.6rem;
+  cursor: pointer;
+}
+
+.blog-modal-close:hover {
+  color: var(--color-light-blue);
+}
+
+.blog-modal-body {
+  padding: 24px;
+  color: var(--color-ddd-color);
+  font-size: 1.6rem;
+  line-height: 1.65;
+}
+
+.blog-post-content {
+  font-family: fira code;
+  font-size: 1em;
+  line-height: 1.6;
+  padding: 0 1.5rem 3rem 1.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+  color: var(--color-ddd-color);
+  word-break: break-word;
+}
+
+.blog-post-content h1,
+.blog-post-content h2,
+.blog-post-content h3 {
+  margin-top: 1.2rem;
+  margin-bottom: 0.6rem;
+  font-weight: 400;
+  color: var(--color-white);
+}
+
+.blog-post-content p {
+  margin-top: 0;
+  margin-bottom: 1.2rem;
+}
+
+.blog-post-content h1 + p,
+.blog-post-content h2 + p,
+.blog-post-content h3 + p {
+  margin-top: 0;
+}
+
+
+#blog-modal,
+#blog-modal *,
+.blog-post-content,
+.blog-post-content * {
+  cursor: default !important;
+  user-select: text !important;
+}
+
+.blog-post-content ::selection {
+  background-color: var(--color-light-blue);
+  color: var(--color-dark-mode);
+}
+
+.blog-post-content ::-moz-selection {
+  background-color: var(--color-light-blue);
+  color: var(--color-dark-mode);
+}
+
+.blog-post-content strong {
+  color: var(--color-white);
+  font-weight: 600;
+}
+
+.blog-post-content em {
+  font-style: italic;
+}
+
+.blog-post-content a {
+  color: var(--color-light-blue);
+  text-decoration: underline;
+}
+
+.blog-post-content blockquote {
+  border-left: 5px solid var(--color-light-blue);
+  padding-left: 1.5rem;
+  margin: 2rem 0;
+  font-style: italic;
+  color: var(--color-gray);
+  background: rgba(255 255 255 / 0.05);
+  border-radius: 8px;
+}
+
+.blog-post-content pre {
+  background: var(--color-dark-mode);
+  border: 1px solid var(--tech-stack-border-color);
+  border-radius: 12px;
+  padding: 1.5rem;
+  overflow-x: auto;
+  margin: 2rem 0;
+  font-family: fira code;
+  font-size: 1.3rem;
+  color: var(--color-light-blue);
+}
+
+.blog-post-content code {
+  background: var(--color-dark-mode);
+  padding: 2px 6px;
+  border-radius: 6px;
+  font-family: fira code;
+  color: var(--color-light-blue);
+}
+
+.blog-post-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin: 2rem 0;
+  display: block;
+}
+
+.blog-modal-body img {
+  max-width: 100%;
+  border-radius: 20px;
+  margin-bottom: 1.5rem;
+  display: block;
+}
+
+.post-meta {
+  margin: 0.8rem 0 2rem 0;
+  font-size: 1.4rem;
+  color: var(--color-ddd-color);
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-family: fira code;
+}
+
+.post-meta .post-date {
+  white-space: nowrap;
+}
+
+.post-meta .post-tags {
+  white-space: nowrap;
+  color: var(--color-light-blue);
+}
+
+.blog-post-content p:empty {
+  margin: 0;
+  padding: 0;
+  height: 0;
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .blog-post-content {
+    font-size: 1.4rem;
+    padding: 0 1rem 2rem 1rem;
+  }
+}

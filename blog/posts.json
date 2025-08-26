@@ -1,0 +1,14 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "Getting Started with My Blog",
+      "filename": "getting-started.md",
+      "excerpt": "Welcome to my personal blog where I'll share my thoughts, learnings, and discoveries in the world of technology and beyond.",
+      "category": "Personal",
+      "date": "2025-08-26",
+      "tags": ["introduction", "personal", "blogging"],
+      "image": "./src/png/Preview-card-min.png"
+    }
+  ]
+}
